@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://fonts.cdnfonts.com/css/source-serif-pro');
+
+body {
+    font-family: 'Source Serif Pro', sans-serif;
+    line-height: 1;
+    font-size: 15px
+}
+
+h1, h2 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+p { 
+    margin-top: 10;
+}
+
+.article-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.table {
+    justify-content: center;
+    text-align: center;
+}
+
+table {
+    width: 80%; 
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
