@@ -12,8 +12,148 @@
     <header>
         <h1 class="article-title">Equipos de Desarrollo de Software: Factores que influyen en su Productividad</h1> 
     </header>
-    <h1>Resultados</h1>
-    <h2>Búsqueda y selección primaria</h2>
+    <div>
+        <h1>Método</h1>
+        <h2>Fuentes de datos y consulta</h2>
+    </div>
+    <div>
+        <p>Las fuentes de datos consultadas en este trabajo, son las siguientes: (Nombre [Acrónimo]): </p>
+        <ul>
+            <li>IEEEXplore [IEEEX]</li>
+            <li>SpringerLink [SL]</li>
+            <li>Science Direct [SD] </li>
+            <li>ACM Digital Library [ACM]</li>
+            <li>Scopus [Scopus]</li>
+        </ul>
+        <p>Dado que cada una de estas librerías digitales poseen su propia sintaxis, ha sido necesario realizar una adaptación de la cadena de búsqueda utilizada en cada fuente de datos (Tabla 1). Además, a fin de reducir la cantidad de resultados obtenidos en algunos motores, se añadieron filtros relacionados a las fechas de publicación y tipo de estudio (artículo científico, publicaciones en revista, etc.).</p>
+    </div>
+    <div class="table">
+        
+        <table>
+            <tr>
+              <th>Fuente</th>
+              <th>Consulta utilizada</th>
+              <th>Filtros</th>
+            </tr>
+            <tr>
+              <td>IEEEX</td>
+              <td>((("Full Text & Metadata":agile) AND ("Full Text & Metadata":"software development") AND ("Full Text & Metadata":team) AND (("Full Text & Metadata":human) OR ("Full Text & Metadata":social) OR ("Full Text & Metadata":cultural)) NEAR/4 (("Full Text & Metadata":factor) OR ("Full Text & Metadata":aspect)) AND (("Abstract":productivity) OR ("Abstract":performance))))</td>
+              <td>Journals
+                Conferences
+                2011-2021
+                </td>
+            </tr>
+            <tr>
+              <td>ACM</td>
+              <td>AllField:((agile AND "software development" AND team AND (human OR social OR cultural) AND (factor OR aspect))) AND Abstract:(productivity OR performance)</td>
+              <td>Publications | Content type: Research article 2011-2021</td>
+            </tr>
+            <tr>
+                <td>SD</td>
+                <td>agile AND "software development"  AND team AND ((human OR social OR cultural ) PRE/4 (factor OR aspect))</td>
+                <td>Title, abstract, keywords: productivity  OR  performance 
+                    2011-2021
+                    Subject areas: Computer science
+                    Article type: Research article
+                    </td>
+            </tr>
+            <tr>
+                <td>Scopus</td>
+                <td>agile  AND  "software development"  AND  team  AND  ( ( human  OR  social  OR  cultural )  PRE/4  ( factor  OR  aspect ) )  AND  ABS ( productivity  OR  performance )  AND  PUBYEAR  >  2010  AND  PUBYEAR  <  2022  AND  ( LIMIT-TO ( DOCTYPE ,  "cp" )  OR  LIMIT-TO ( DOCTYPE ,  "ar" ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SL</td>
+                <td>agile AND "software development" AND team AND (( human OR social OR  cultural ) NEAR/4 (factor OR aspect)) AND (productivity OR performance)</td>
+                <td>2011-2021 - Computer Science - 
+                    Article
+                    Conference paper</td>                    
+            </tr>
+          </table>
+          <p class="table-name">Tabla 1. Cadenas de texto utilizadas para las búsquedas</p>
+        </div>
+    </div>
+    <div>
+        <h2>Criterios de inclusión y exclusión</h2>
+    </div>
+    <div>
+        <p>Para incrementar la precisión de la investigación, se han eliminado estudios a través de la definición de criterios de inclusión y exclusión, de acuerdo con lo recomendado por (Kitchenham & Charters, 2007). Los criterios de inclusión planteados fueron:</p>
+        <ul>
+            <li>El artículo debe estar escrito en inglés</li>
+            <li>El artículo debe haber sido publicado en conferencias o revistas.</li>
+            <li>Entre el título o el abstract poseen al menos 3 de las siguientes palabras, ya sea en singular o plural: <i>Agile, Software, Development, Human, Social, Cultural, Factor, Aspect, Team, Productivity, Performance.</i></li>
+            <li>El título o el abstract sugieren que el estudio tiene relación con la productividad o los factores que la afectan en los equipos de desarrollo de SW.</li>
+        </ul>
+    </div>
+    <div>
+        <p>Además, se han eliminado aquellos que cumplían con los siguientes criterios de exclusión:</p>
+        <ul>
+            <li>Estudios cuyo principal objetivo es clasificar otros artículos o son revisiones sistemáticas en sí mismas.</li>
+            <li>Estudios publicados en libros de texto.</li>
+            <li>Estudios que nombran o consideran importante la productividad pero que no indican cuales son los factores que la afectan.</li>
+            <li>Estudios que se encuentran restringidos al público general por motivos de derecho de autor. </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Extracción de datos y análisis</h2>
+    </div>
+    <div>
+        <p>En la fase de extracción de datos se reunió toda la información de los estudios que permitirán dar respuesta a las preguntas de investigación (Kitchenham & Charters, 2007). Primeramente, se recolectó información fundamental para identificar cada uno de los estudios: Título, autores y año de publicación.</p>
+        <p>Además, para analizar con mayor profundidad los estudios seleccionados, se decidió extraer los factores nombrados en el artículo y las adecuaciones realizadas sobre prácticas ágiles a la existencia de dichos factores.</p>
+    </div>
+    <div>
+        <h3>Evaluación de calidad</h3>
+        <p>Una vez seleccionados los estudios que cumplían con los criterios de inclusión y que no fueron excluidos, se verificó la calidad de la búsqueda. Acorde a lo propuesto por (Kitchenham & Charters, 2007), se definieron cuatro preguntas de verificación para evaluar la calidad de cada estudio y poder compararlos. El procedimiento de puntuación utilizado fue: Sí (S) = 1, Parcialmente (P) = 0.5, No (N) = 0, acorde a lo indicado en la Tabla 2. </p>
+        <p>Las preguntas de verificación fueron:</p>
+    </div>
+    <div>
+        <ul>
+            <li>VC1: ¿El objetivo del estudio está claramente planteado?</li>
+            <li>VC2: ¿El proceso de investigación está correctamente estructurado?</li>
+            <li>VC3: ¿Identifica claramente los factores que influyen en la productividad del desarrollo de SW?</li>
+            <li>VC4: ¿Analiza el impacto de los factores en la productividad del desarrollo de SW?</li>
+        </ul>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>VC</th>
+                <th>SÍ</th>
+                <th>PARCIALMENTE</th>
+                <th>NO</th>
+            </tr>
+            <tr>
+                <td>VC1</td>
+                <td>El estudio menciona explícitamente el objetivo y fue sencillamente comprendido por todos los miembros</td>
+                <td>El estudio menciona explícitamente el objetivo pero no fue sencillamente comprendido por todos los miembros</td>
+                <td>El estudio no menciona explícitamente el objetivo, no se encuentra claramente definido</td>
+            </tr>
+            <tr>
+                <td>VC2</td>
+                <td>El estudio posee las partes: introducción, método, resultado, discusión, limitaciones y conclusión o equivalentes.</td>
+                <td>El estudio posee al menos 3 de los siguientes elementos: introducción, método, resultado, discusión, limitaciones y conclusión o equivalentes</td>
+                <td>El estudio sólo posee 2 o menos de los siguientes elementos: introducción, método, resultado, discusión, limitaciones y conclusión o equivalentes</td>
+            </tr>
+            <tr>
+                <td>VC3</td>
+                <td>El estudio nombra explícitamente los factores y su influencia con la productividad</td>
+                <td>El estudio nombra factores pero su relación con la productividad no está clara</td>
+                <td>El estudio nombra factores pero no se logró establecer una relación con la productividad</td>
+            </tr>
+            <tr>
+                <td>VC4</td>
+                <td>El estudio menciona claramente cómo los factores mencionados afectan a la productividad</td>
+                <td>El estudio menciona factores pero cómo afectan a la productividad no está claramente detallado</td>
+                <td>El estudio no menciona cómo los factores afectan a la productividad</td>
+            </tr>
+        </table>
+        <p class="table-name">Tabla 2. Detalle calificación de calidad</p>
+    </div>
+    <div>
+        <h1>Resultados</h1>
+        <h2>Búsqueda y selección primaria</h2>
+    </div>
+    
     <div>    
         <div>
             <p>Al ejecutar la búsqueda en cada fuente de datos (FD) con la cadena de búsqueda correspondiente adaptada a la sintaxis de cada motor, se obtuvieron los resultados resumidos en Tabla 3. </p>
@@ -380,61 +520,3 @@
     
 </body>
 </html>
-
-
-
-        <!--
-        <h2>2. Método</h2>
-        <h3>2.2. Fuentes de datos y consulta</h3>
-        <p>Las fuentes de datos consultadas en este trabajo, son las siguientes: (Nombre [Acrónimo]): </p>
-        <ul>
-            <li>IEEEXplore [IEEEX]</li>
-            <li>SpringerLink [SL]</li>
-            <li>Science Direct [SD] </li>
-            <li>ACM Digital Library [ACM]</li>
-            <li>Scopus [Scopus]</li>
-        </ul>
-        <p>Dado que cada una de estas librerías digitales poseen su propia sintaxis, ha sido necesario realizar una adaptación de la cadena de búsqueda utilizada en cada fuente de datos (Tabla 1). Además, a fin de reducir la cantidad de resultados obtenidos en algunos motores, se añadieron filtros relacionados a las fechas de publicación y tipo de estudio (artículo científico, publicaciones en revista, etc.).</p>
-        <p>Tabla 1. Cadenas de texto utilizadas para las búsquedas</p>
-        <table>
-            <tr>
-              <th>Fuente</th>
-              <th>Consulta utilizada</th>
-              <th>Filtros</th>
-            </tr>
-            <tr>
-              <td>IEEEX</td>
-              <td>((("Full Text & Metadata":agile) AND ("Full Text & Metadata":"software development") AND ("Full Text & Metadata":team) AND (("Full Text & Metadata":human) OR ("Full Text & Metadata":social) OR ("Full Text & Metadata":cultural)) NEAR/4 (("Full Text & Metadata":factor) OR ("Full Text & Metadata":aspect)) AND (("Abstract":productivity) OR ("Abstract":performance))))</td>
-              <td>Journals
-                Conferences
-                2011-2021
-                </td>
-            </tr>
-            <tr>
-              <td>ACM</td>
-              <td>AllField:((agile AND "software development" AND team AND (human OR social OR cultural) AND (factor OR aspect))) AND Abstract:(productivity OR performance)</td>
-              <td>Publications | Content type: Research article 2011-2021</td>
-            </tr>
-            <tr>
-                <td>SD</td>
-                <td>agile AND "software development"  AND team AND ((human OR social OR cultural ) PRE/4 (factor OR aspect))</td>
-                <td>Title, abstract, keywords: productivity  OR  performance 
-                    2011-2021
-                    Subject areas: Computer science
-                    Article type: Research article
-                    </td>
-            </tr>
-            <tr>
-                <td>Scopus</td>
-                <td>agile  AND  "software development"  AND  team  AND  ( ( human  OR  social  OR  cultural )  PRE/4  ( factor  OR  aspect ) )  AND  ABS ( productivity  OR  performance )  AND  PUBYEAR  >  2010  AND  PUBYEAR  <  2022  AND  ( LIMIT-TO ( DOCTYPE ,  "cp" )  OR  LIMIT-TO ( DOCTYPE ,  "ar" ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>SL</td>
-                <td>agile AND "software development" AND team AND (( human OR social OR  cultural ) NEAR/4 (factor OR aspect)) AND (productivity OR performance)</td>
-                <td>2011-2021 - Computer Science - 
-                    Article
-                    Conference paper</td>                    
-            </tr>
-          </table>
-          -->
